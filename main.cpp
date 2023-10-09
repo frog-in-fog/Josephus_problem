@@ -593,7 +593,7 @@ void check_circular_linked_list_working(){
     Sum.print();
 }
 
-int main(){
+void check_josephus_problem_solving(){
     srand(time(NULL));
     unsigned size, step;
     std::cout<<"Enter the number of elements: ";
@@ -602,7 +602,6 @@ int main(){
     std::cout<<"Enter the step value: ";
     std::cin>>step;
 
-    //check_circular_linked_list_working();
 
     auto cll = new circular_linked_list<int>;
     for (int i = 0; i < size; i++){
@@ -620,6 +619,14 @@ int main(){
     } catch (const StepException &se) {
         std::cout << se.getMessage() << std::endl;
     }
+}
+
+int main(){
+
+    //check_circular_linked_list_working();
+    check_josephus_problem_solving();
+
+
 
     return 0;
 }
